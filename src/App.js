@@ -1,11 +1,18 @@
-import React from "react";
+import React, { Component } from "react";
+import BurgerBuilder from "../src/containers/BurgerBuilder/BurgerBuilder";
+import Layout from "../src/components/Layout/Layout";
 import "./styles.css";
 
-export default function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editdwdwdwing to see some magic happen!</h2>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Layout>
+          <BurgerBuilder />
+        </Layout>
+      </div>
+    );
+  }
 }
+
+export default App;
