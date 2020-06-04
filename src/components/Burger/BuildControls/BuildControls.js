@@ -14,7 +14,19 @@ const buildControls = props => {
       />
     );
   });
-  return <div className="BuildControls">{buildControlList}</div>;
+  return (
+    <div className="BuildControls">
+      <p>Current price: £{props.price.toFixed(2)}</p>
+      {buildControlList}
+      <button
+        className="OrderButton"
+        disabled={!props.purchasable}
+        onClick={props.orderNow}
+      >
+        Order now
+      </button>
+    </div>
+  );
 };
 
 export default buildControls;
